@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length convertor</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <h2>CM TO INCHES</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="length in cm">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()"> convert to inches</button>
+        </div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+ function convert(){
+   let cmVal = Number(document.getElementById("input").value)
+   let inchVal= cmVal/2.54
+   let result= document.getElementById("result")
+   result.innerHTML =inchVal.toFixed(3) + "inches"
+ }
+    </script>
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f5e8ba;
+        } 
+        #wrapper div,#wrapper h2{
+            display: flex;
+            justify-content: center;
+        }
+        h2{
+            color: #e8b819;
+            letter-spacing: 1px;
+        }
+        input{
+            border-radius: 5px;
+            border: 2px solid  black;
+            height: 2em;
+            width: 250px;
+            padding-left:10px ;
+        }
+        input:active{
+            border: none;
+        }
+        #wrapper {
+            height: 300px;
+            width: 400px;
+            margin: 200px auto;
+            background-color: #1f2029;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        button{
+            margin-top: 20px;
+            background-color: #ffeba7;
+            height:44px;
+             font-weight: 600;
+             border-radius: 4px;
+             padding: 1px;
+             letter-spacing: 1px;
+             border: none;
+             background-color: #ffeba7;
+             color: #102770;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        #result{
+            color: white;
+            margin-top: 20px;
+            font-size: 32px;
+        }
+    </style>
+
+</body>
+</html>
